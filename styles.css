@@ -1,0 +1,82 @@
+* { 
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+
+main {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    width: 582px;
+    height: 840px;
+    padding: 20px 10px;
+    background-image: url("./assets/tuccis-back.jpeg");
+}
+
+.header, .drum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: hsla(180, 96%, 79%, 0.555);
+    border-radius: 10px;
+}
+
+.header {
+    height: 100px;
+    margin-top: 50px;
+    font-size: 3.0rem;
+    text-transform: uppercase;
+    color: hsl(180, 54%, 35%);
+    background-color: hsla(180, 100%, 97%, 0.815);
+}
+
+.key {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    transition: transform .3s linear, border-color .3s linear
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: hsl(180, 54%, 35%) 
+}
+
+.sign {
+    font-size: 3.0rem;
+}
